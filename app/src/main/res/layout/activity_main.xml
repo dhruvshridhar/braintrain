@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timertext"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoretext"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="337dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="61dp"
+        android:background="@android:color/holo_green_light"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questiontext"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="61dp"
+        android:background="@android:color/holo_purple"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/scoretext"
+        app:layout_constraintStart_toEndOf="@+id/timertext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/startbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="start"
+        android:text="Start"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="395dp"
+        android:layout_height="385dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="180dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/opt1"
+            android:layout_width="160dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="100dp"
+            android:background="@android:color/holo_red_light"
+            android:onClick="ansselected"
+            android:tag="1"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/opt3"
+            app:layout_constraintEnd_toStartOf="@+id/opt2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timertext" />
+
+        <Button
+            android:id="@+id/opt2"
+            android:layout_width="160dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="102dp"
+            android:layout_marginEnd="44dp"
+            android:background="@android:color/holo_blue_bright"
+            android:onClick="ansselected"
+            android:tag="2"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/opt4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toEndOf="@+id/opt1"
+            app:layout_constraintTop_toBottomOf="@+id/scoretext" />
+
+        <Button
+            android:id="@+id/opt3"
+            android:layout_width="160dp"
+            android:layout_height="115dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="304dp"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="ansselected"
+            android:tag="3"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/opt4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/opt1" />
+
+        <Button
+            android:id="@+id/opt4"
+            android:layout_width="160dp"
+            android:layout_height="115dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="302dp"
+            android:background="@color/colorAccent"
+            android:onClick="ansselected"
+            android:tag="4"
+            android:textSize="48sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/opt3"
+            app:layout_constraintTop_toBottomOf="@+id/opt2" />
+
+    </android.support.v7.widget.GridLayout>
+
+</android.support.constraint.ConstraintLayout>
